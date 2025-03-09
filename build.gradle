@@ -26,6 +26,14 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'org.springframework.boot:spring-boot-starter-jetty'
+
+	// Tomcat 제거
+	configurations {
+		all {
+			exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+		}
+	}
 }
 
 dependencyManagement {

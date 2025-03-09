@@ -8,3 +8,7 @@ spring:
         git:
           uri: https://github.com/eocjf4701/config-server.git
           clone-on-start: true
+  jetty:
+    threads:
+      max: 200
+      min: 10
